@@ -19,7 +19,7 @@ import getpass
 #SElat = input("Latitude Coords for the SE corner:")
 #SElong = input("Longitude Coords for the SE corner:")
 #c = csv.writer(open("Images/manifest2.csv",dialect='excel',"w",newline=''),delimiter=',')
-test= ""
+
     
     
 name = ""
