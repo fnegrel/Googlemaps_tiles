@@ -18,8 +18,6 @@ import getpass
 #NWlong = input("Longitude Coords for the NW corner:")
 #SElat = input("Latitude Coords for the SE corner:")
 #SElong = input("Longitude Coords for the SE corner:")
-#c = csv.writer(open("Images/manifest2.csv",dialect='excel',"w",newline=''),delimiter=',')
-
     
     
 name = ""
@@ -65,9 +63,9 @@ def cropping():
             Image_see.save("Images/Area_"+str(i)+"_"+str(j)+".jpg")
             response.close()  
                         
-            data = data + [[compt, name, 'GoogleMapsAPI', 'https://maps.googleapis.com/maps/api/staticmap?center='+str(a)+','+str(b)+'&zoom=16&size=800x400&scale=2&maptype=satellite&format=jpg&key=AIzaSyBBW23KLCKQ7tTUaCZ7Eu-7CZLLfcj5wnw', user, 'Creative Commons - share adapt attribute']]
+            data = data + [[compt, name+".jpg", 'GoogleMapsAPI', 'https://maps.googleapis.com/maps/api/staticmap?center='+str(a)+','+str(b)+'&zoom=16&size=800x400&scale=2&maptype=satellite&format=jpg&key=AIzaSyBBW23KLCKQ7tTUaCZ7Eu-7CZLLfcj5wnw', user, 'Creative Commons - share adapt attribute']]
     #Writing the manifest for zooniverse        
-    outfile = open('Images/Manifest.csv', 'w')
+    outfile = open('Images/Manifest.csv', 'w',newline='')
     writer = csv.writer(outfile, delimiter=';', quotechar='"')
     writer.writerows(data)
     outfile.close()
