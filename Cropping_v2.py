@@ -73,4 +73,6 @@ def cropping():
     outfile.close()
     return("done")
 
-cropping()
+if __name__=='__main__':
+
+    cropping()
